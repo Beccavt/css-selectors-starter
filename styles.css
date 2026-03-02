@@ -67,7 +67,8 @@
     add the universal CSS selector to the styles below
 */
 /* ----- */
-body {
+* {
+    box-sizing: border-box;
     font-family: var(--fonts);
     line-height: 1.3;
     color: var(--dk-gray);
@@ -81,7 +82,6 @@ body {
 */
 /* ----- */
 body {
-    box-sizing: border-box;
     background-color: var(--lt-gray);
 }
 
@@ -136,7 +136,7 @@ h1 {
     select both the h1 and h2 tags on the page by tag name
 */
 /* ----- */
-h1, h2{
+h1, h2 {
     grid-column: 1/-1;
     text-align: center;
     font-weight: bold;
@@ -242,7 +242,7 @@ main {
     select the sections on the page that are direct descendants to the main by tag names and using the direct descendant selector
 */
 /* ----- */
-main>section {
+main > section {
     display: block; 
     width: calc(100% - 2rem);
     max-width: calc(500px - 2rem);
@@ -422,7 +422,7 @@ input, label, select, textarea {
     select all of the inputs and selects by tag name
 */
 /* ----- */
-input, label, select, textarea {
+input, select {
     height: 2rem;
     border: 2px solid var(--dk-gray);
 }
@@ -529,7 +529,7 @@ input[type="submit"]:focus {
     select the h2 in the list styling section using the class name selector
 */
 /* ----- */
-.list-styling h2 {
+#list-styling h2 {
     color: var(--blue);
 }
 
@@ -564,7 +564,7 @@ input[type="submit"]:focus {
     select the bullets on the unordered list in the list styling section using the tag name and pseudo-class selectors
 */
 /* ----- */
-#list-styling ul::marker {
+#list-styling li::marker {
     font-size: 3rem;
     content: "\2730";
 }
@@ -770,7 +770,7 @@ caption {
     select the odd table rows in the table body of the table styles section using the element/tag name and the pseudo-class selectors
 */
 /* ----- */
-tbody tr:nth-child(odd) { 
+#table-styles tbody tr:nth-child(odd) { 
     background-color: var(--dv-orange);
 }
 
@@ -780,7 +780,7 @@ tbody tr:nth-child(odd) {
     select the first column in the table body of the table styles section using the element/tag name and the pseudo-class selectors
 */
 /* ----- */
-tbody td:first-child { 
+#table-styles tbody td:first-child { 
     font-weight: bold;
 }
 
@@ -790,7 +790,8 @@ tbody td:first-child {
     select the table heading cells (th) and the table data cells in the table styles section using the element/tag name and multiple element selectors
 */
 /* ----- */
-th, td { 
+#table-styles th,
+#table-styles td { 
     border: 1px solid var(--dk-gray);
     padding: 4px;
 }
@@ -801,7 +802,7 @@ th, td {
     select the table footer in the table styles section using the element/tag name selector
 */
 /* ----- */
-tfoot { 
+#table-styles tfoot { 
     font-weight: bold;
 }
 
